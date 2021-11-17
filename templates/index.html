@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition in Python</title>
+    <style>
+      body {
+        background: #241d50;
+      }
+    </style>
+</head>
+
+     <header>
+<div id="speechContainer">
+    <center><h1 style="color:Green"> Voice Recognition</h1></center>
+    <center><p1 style="color:orange"> Upload audio.wav file</p1></center>
+     </header>
+    <form method="post" enctype="multipart/form-data">
+        <center><input type="file" name="file"/></center>
+        <center> <img src="https://tbtech.co/wp-content/uploads/2021/03/shutterstock_1159197631-scaled.jpg" width="800" , height="350"> </center>
+        <center><input type="submit" id="submitButton" style="background-color:purple;color:white;width:150px;height:40px;" value="Transcribe"> </center>
+    </form>
+
+
+    {% if transcript != "" %}
+        <div id="speechTranscriptContainer">
+            <center><h1>Transcript</h1></center>
+            <center><p style="color:white;" id="speechText">{{ transcript }}</p></center>
+        </div>
+    {% endif %}
+</div>
+<footer style="color:yellow"> Note: Please wait once you click transcribe.This project may not also supports large wav audio file.</footer>
+</body>
+</html>
